@@ -213,17 +213,15 @@
             heart.classList.add('heart');
             heart.innerText = '❤️';
             heart.style.left = `${Math.random() * 100}%`;
-            heart.style.animationDuration = `${Math.random() * 3 + 2}s`;
-            document.getElementById('heartContainer').appendChild(heart);
+            heart.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            document.body.appendChild(heart);
 
             setTimeout(() => {
                 heart.remove();
-            }, 5000);
+            }, 5000); // Remove heart after animation
         }
 
-        setInterval(createHeart, 500);
+        setInterval(createHeart, 500); // Create heart every 500ms
     </script>
-
-    <div id="heartContainer" class="absolute inset-0 z-0 pointer-events-none"></div>
 </body>
 </html>
